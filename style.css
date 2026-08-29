@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'roboto', sans-serif;
+}
+
+
+
+li {
+  list-style: none;
+  display: flex;
+}
+
+/* Navigation */
+
+#personal-logo {
+  width: 50px;
+  height: 50px;
+  filter:invert(0)
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100px;
+
+  .nav__link--list {
+    display: flex;
+}
+
+.nav__link {
+  margin: 0 12px;
+}
