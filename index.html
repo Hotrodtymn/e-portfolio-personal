@@ -3,14 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Thomas Babb</title>
+
     <link rel="stylesheet" href="style.css" />
+
     <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-/>
-    </script>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
+
   <body>
     <section id="landing-page">
       <nav>
@@ -21,15 +24,17 @@
             alt="Thomas Babb"
           />
         </figure>
+
         <ul class="nav__link--list">
           <li class="nav__link click">
             <a
-              href="#"
+              href="#about"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
             >
               About
             </a>
           </li>
+
           <li class="nav__link click">
             <a
               href="#projects"
@@ -38,6 +43,7 @@
               Projects
             </a>
           </li>
+
           <li class="nav__link click">
             <a
               href="#contact"
@@ -48,80 +54,129 @@
           </li>
         </ul>
       </nav>
-      <header class="header">
+
+      <header class="header" id="about">
         <div class="header__content">
           <h1 class="title">Well met</h1>
+
           <h1 class="title title--secondary">I'm Thomas</h1>
+
           <p class="header__para">
-            I am a <b class="orange">Frontend Software Developer</b> with a
-            strong passion for creating innovative and beautiful solutions.
+            I am a
+            <strong class="orange">Frontend Software Developer</strong>
+            with a strong passion for creating innovative and beautiful
+            solutions.
             <br />
-            Here is a little bit <b class="orange">about me</b>.
+            Here is a little bit
+            <strong class="orange">about me</strong>.
           </p>
+
           <div class="social__list">
-            <a href="https://www.linkedin.com/in/thomasbabbpm/" class="social__link click" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/thomasbabbpm/"
+              class="social__link click"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
               <i class="fab fa-linkedin"></i>
             </a>
-            <a href="https://github.com/Hotrodtymn" class="social__link click" rel="noopener noreferrer">
+
+            <a
+              href="https://github.com/Hotrodtymn"
+              class="social__link click"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
               <i class="fab fa-github"></i>
             </a>
-            <a href="./assets/Thomas_Babb_Resume.pdf" target="_blank" class="social__link click" rel="noopener noreferrer" download>
+
+            <a
+              href="./assets/Thomas_Babb_Resume.pdf"
+              class="social__link click"
+              download
+              aria-label="Download Resume"
+            >
               <i class="fas fa-file-pdf"></i>
             </a>
           </div>
         </div>
       </header>
-      <button class="mail__btn">
-        <a href="mailto:thomasbabb@gmail.com" class="social__link click" rel="noopener noreferrer">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </button>
-      <a href="#projects" class="scroll">
-  <div class="scroll__icon click"></div>
-</a>
-  <section id="projects">
-  <div class="container">
-    <div class="row">
-      <h1 class="section__title">
-        Here are some of my <span class="orange">projects</span>
-      </h1>
-      <ul class="project__list">
-        <li class="project">
-          <div class="project__wrapper">
-            <img
-              src="./assets/blinker mockup.png"
-              class="project__img"
-          <div class="project__wrapper--bg">
-          </div>
-            <div class="project__description">
-              <h3 class="project__description--title">
-                Car Sales Projects
-              </h3>
-              <h4 class="project__description--sub-title">
-                Html, CSS, JavaScript, Vue, Vuex
-              </h4>
-              <p class="project__description--para">
-                Lorem ipsum dolor sit amet, consectetur adipiscing
-                luctus faucibus augue. Fusce volutpat diam dapibus
-                adipiscing elit. Maecenas id eleifend libero. In h
-              </p>
-              div class="project__description--links">
-                <a
-                  href="#"
-                  class="project__description--link">
-                  <i class="fab fa-github"></i>
-                </a>
-                <a
-                  href="#"
-                  class="project__description--link">
-                  <i class="fas fa-link"></i>
-                </a>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+
+      <a
+        href="mailto:thomasbabb@gmail.com"
+        class="mail__btn"
+        aria-label="Email Thomas"
+      >
+        <i class="fas fa-envelope"></i>
+      </a>
+
+      <a href="#projects" class="scroll" aria-label="Scroll to projects">
+        <div class="scroll__icon click"></div>
+      </a>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h2 class="section__title">
+            Here are some of my <span class="orange">projects</span>
+          </h2>
+
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img
+                  src="./assets/blinker mockup.png"
+                  class="project__img"
+                  alt="Car Sales Project"
+                />
+
+                <div class="project__wrapper--bg"></div>
+
+                <div class="project__description">
+                  <h3 class="project__description--title">
+                    Car Sales Project
+                  </h3>
+
+                  <h4 class="project__description--sub-title">
+                    HTML, CSS, JavaScript, Vue, Vuex
+                  </h4>
+
+                  <p class="project__description--para">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing luctus
+                    faucibus augue. Fusce volutpat diam dapibus adipiscing
+                    elit. Maecenas id eleifend libero.
+                  </p>
+
+                  <div class="project__description--links">
+                    <a
+                      href="#"
+                      class="project__description--link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View project on GitHub"
+                    >
+                      <i class="fab fa-github"></i>
+                    </a>
+
+                    <a
+                      href="#"
+                      class="project__description--link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="View live project"
+                    >
+                      <i class="fas fa-link"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
