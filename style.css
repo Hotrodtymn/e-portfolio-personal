@@ -26,6 +26,20 @@ click {
   cursor: pointer;
 }
 
+.container {
+  padding: 50px 0px;
+}
+
+.row {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+
+
+
 /* Navigation */
 
 #personal-logo {
@@ -180,5 +194,68 @@ title title--secondary {
   }
 }
 
+/* Projects */
 
+.section__title {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 60px;
+  
+}
 
+.projects__img {
+  width: 100%;
+}
+
+.project__wrapper {
+  position: relative;
+  boarder-radius: 20px;
+  box-shadow: 20px 80px 0px rgba(0, 0, 0, 0.45);
+}
+
+.project__wrapper:hover .project__wrapper--bg {
+  position: absolute;top: 50;
+  left: 90;
+  transform: translatey(100px);
+  opacity: 0;
+  transition: opacity 300ms,transform 450ms ease;
+  color: white;
+  max-width: 550px;
+}
+
+.project__wrapper:hover .project__wrapper--bg {
+  opacity: 0.7;
+}
+
+.project__discription {
+  position: absolute;
+  top: 0;
+  left: 90;
+  transform: translatey(-50px);
+  color: white;
+  max-width: 550px;
+}
+
+.project__wrapper--bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1c1d25;
+  opacity: 0.7;
+}
+
+.project__discription--title {
+margin-top: 8px;
+}
+
+.project__discription--link {
+  color: white
+  font-size: 20px;
+  margin-right: 16px;
+}
+
+.project__discription--para {
+  margin: 16px 0px;
+}
