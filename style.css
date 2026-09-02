@@ -28,6 +28,7 @@ click {
 
 .container {
   padding: 50px 0px;
+  width: 100%;
 }
 
 .row {
@@ -36,10 +37,12 @@ click {
   margin: 0 auto;
   padding: 0 12px;
 }
+.section {
+  background-color: rgba(245, 245, 245, 0.5);
+}
 
 
-
-
+ 
 /* Navigation */
 
 #personal-logo {
@@ -106,7 +109,7 @@ section {
   font-size: 24px;
   line-height: 2;
   max-width: 450px;
-  text-align: 
+  text-align: left;
 }
 .title {
   font-size: 80px;
@@ -176,7 +179,7 @@ title title--secondary {
 .scroll__icon::after {
   content: "";
   width: 4px;
-  hight: 6px;
+  height: 6px;
   background-color: #242424;
   border-radius: 2%;
   animation: scroll 1000ms infinite alternate-reverse;
@@ -227,6 +230,7 @@ title title--secondary {
   transform: translateY(300%);
   color: white;
   max-width: 550px;
+  transition: transform 450ms ease;
 }
 
 .project__wrapper:hover .project__description {
@@ -240,19 +244,55 @@ title title--secondary {
   width: 100%;
   height: 100%;
   background-color: #1c1d25;
-  opacity: 0.7;
+  opacity: 0;
+  transition: opacity 300ms ease;
 }
 
 .project__description--title {
-margin-top: 8px;
+  margin-top: 8px;
 }
 
 .project__description--link {
-  color: white
+  color: white;
   font-size: 20px;
   margin-right: 16px;
 }
 
 .project__description--para {
   margin: 16px 0px;
+}
+
+
+/* Footer */
+
+.footer {
+  background-color: #242424;
+  display: flex;
+  padding: 6% 0;
+}
+
+.footer__row {
+  display: flex;
+  flexdirection: column;
+  align-items: center;
+}
+
+.footer__logo--img {
+  width: 70px;
+}
+
+.footer__social__list {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+.footer__social__link {
+  display: flex;
+  margin-top: 12px;
+}
+
+.footer__copyright {
+  color: white;
 }
