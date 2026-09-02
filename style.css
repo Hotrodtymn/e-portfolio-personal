@@ -203,15 +203,16 @@ title title--secondary {
   
 }
 
-.projects__img {
+.project__img {
   width: 100%;
 }
 
 .project__wrapper {
   position: relative;
-  boarder-radius: 20px;
-  box-shadow: 20px 80px 0px rgba(0, 0, 0, 0.45);
-}
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+
 
 .project__wrapper:hover .project__wrapper--bg {
   position: absolute;top: 50;
@@ -220,20 +221,23 @@ title title--secondary {
   opacity: 0;
   transition: opacity 300ms,transform 450ms ease;
   color: white;
-  max-width: 550px;
 }
 
 .project__wrapper:hover .project__wrapper--bg {
   opacity: 0.7;
 }
 
-.project__discription {
+.project__description {
   position: absolute;
-  top: 0;
-  left: 90;
-  transform: translatey(-50px);
+  top: 50%;
+  margin-left: 20px;
+  transform: translateY(300%);
   color: white;
   max-width: 550px;
+}
+
+.project__wrapper:hover .project__description {
+  transform: translateY(-50%);
 }
 
 .project__wrapper--bg {
