@@ -1,3 +1,5 @@
+CSS:
+
 @import url("https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap");
 
 * {
@@ -27,7 +29,7 @@ click {
 }
 
 .container {
-  padding: 50px 0px;
+  padding: 0px 0px;
   width: 100%;
 }
 
@@ -41,6 +43,36 @@ click {
   background-color: rgba(245, 245, 245, 0.5);
 }
 
+
+.link__hover-effect {
+  position: relative;
+}
+
+
+.link__hover-effect:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  height: 3px;
+  width: 0%;
+  background-color: black;
+  right: 0;
+  transition: all; 300ms ease;
+}
+
+.link__hover-effect--white:after {
+  background-color: white;
+}
+
+
+.link__hover-effect--white:after {
+  background-color: black;
+}
+.link__hover-effect:hover:after {
+  left: 0; 
+   width: 100;
+  
+}
 
  
 /* Navigation */
@@ -76,9 +108,6 @@ nav {
   font-size: 18px;
   font-weight: 700;
 }
-
-
-
 
 /* Landing Page */
 
@@ -208,6 +237,12 @@ title title--secondary {
 
 .project__img {
   width: 100%;
+  trasition: all 800ms ease;
+}
+
+.project:hover .project__img {
+  transform: scale(.7);
+  filter: blur(5px);
 }
 
 .project__wrapper {
@@ -216,8 +251,6 @@ title title--secondary {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.45);
   overflow: hidden;
 }
-
-
 
 .project__wrapper:hover .project__wrapper--bg {
   opacity: 0.7;
@@ -262,18 +295,17 @@ title title--secondary {
   margin: 16px 0px;
 }
 
-
 /* Footer */
 
-.footer {
+footer {
   background-color: #242424;
   display: flex;
-  padding: 6% 0;
+  padding: 24px 0;
 }
 
 .footer__row {
   display: flex;
-  flexdirection: column;
+  flex-direction: column;
   align-items: center;
 }
 
@@ -281,18 +313,24 @@ title title--secondary {
   width: 70px;
 }
 
-.footer__social__list {
+.footer__social--list {
   width: 100%;
   max-width: 500px;
   display: flex;
   justify-content: space-around;
   margin: 20px;
 }
-.footer__social__link {
+.footer__social--link {
   display: flex;
   margin-top: 12px;
+  color: white;
 }
 
 .footer__copyright {
   color: white;
 }
+
+footer .container {
+  padding: 0 12px;
+}
+
