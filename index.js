@@ -3,13 +3,25 @@ console.log("INDEX.JS IS LOADED");
 // service_37vvo12
 // user_CPDpNHh5-XGqxpOZ6
 
+let isModalOpen = false;
+let contrastToggle = false;
+
+function toggleContrast() {
+  (document, (body.classList = !contrastToggle));
+  if (contrastToggle) {
+    document.body.classList += " dark-theme";
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
+}
+
 function contact(event) {
   event.preventDefault();
 
-  const loading = document.querySelector(".model__overlay--loading");
-  const success = document.querySelector(".model__overlay--success");
+  const loading = document.querySelector(".modal__overlay--loading");
+  const success = document.querySelector(".modal__overlay--success");
 
-  loading.classList.add("model__overlay--visible");
+  loading.classList.add("modal__overlay--visible");
 
   emailjs
     .sendForm(
@@ -19,15 +31,15 @@ function contact(event) {
       "CPDpNHh5-XGqxpOZ6",
     )
     .then(() => {
-      loading.classList.remove("model__overlay--visible");
-      success.classList.add("model__overlay--visible");
+      loading.classList.remove("modal__overlay--visible");
+      success.classList.add("modal__overlay--visible");
 
-      setTimeout(() => {
-        success.classList.remove("model__overlay--visible");
-      }, 3000);
+      // setTimeout(() => {
+      //   success.classList.remove("modal__overlay--visible");
+      // }, 3000);
     })
     .catch((error) => {
-      loading.classList.remove("model__overlay--visible");
+      loading.classList.remove("modal__overlay--visible");
 
       console.log("EmailJS error:", error);
       console.log("EmailJS error text:", error.text);
@@ -38,14 +50,14 @@ function contact(event) {
     });
 }
 
-let ismodelopen = false;
+let ismodalopen = false;
 function togglemodal() {
-  if (ismodelopen) {
-    ismodelopen = false;
-    return document.body.classList.remove("model--open");
+  if (ismodalopen) {
+    ismodalopen = false;
+    return document.body.classList.remove("modal--open");
   }
-  ismodelopen = !ismodelopen;
-  //Toggle Model
-  console.log("togglemodel");
-  document.body.classList += " model--open";
+  ismodalopen = !ismodalopen;
+  //Toggle modal
+  console.log("togglemodal");
+  document.body.classList += " modal--open";
 }

@@ -12,17 +12,21 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+
     <script src="index.js"></script>
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "CPDpNHh5-XGqxpOZ6",
-      });
-   })();
-</script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "CPDpNHh5-XGqxpOZ6",
+        });
+      })();
+    </script>
   </head>
 
   <body>
@@ -61,6 +65,13 @@
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
             >
               Contact
+            </a>
+          </li>
+          <li class="nav__link click" onclick="toggleContrast">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect link__hover-effect--black"
+            ></a><i class="fa-solid fa-circle-half-stroke"></i></dark-mode>
             </a>
           </li>
         </ul>
@@ -114,76 +125,133 @@
           </div>
         </div>
       </header>
+
       <a
         href="mailto:thomasbabb@gmail.com"
         class="mail__btn"
-        aria-label="Email Thomas" onclick="togglemodal()"
+        aria-label="Email Thomas"
+        onclick="togglemodal()"
       >
         <i class="fas fa-envelope"></i>
       </a>
+
       <a href="#projects" class="scroll" aria-label="Scroll to projects">
         <div class="scroll__icon click"></div>
       </a>
-      <div class="model">
-        <div class="model__half model__about">
-          <h3 class="model__title model__title--about">Here's a bit about me.</h3>
-          <h4 class="model__sub-title">Frontend Software Engineer</h4>
-          <p class="model__para">
-            I am a 37 year-old <b class="orange">frontend software engineer</b> with experience in creating modern, responsive <b class="orange">web applications</b>.
-            <br>
-            I am currently seeking a position where I can contribute my skills and grow as a <b class="orange">software engineer</b>.
+
+      <div class="modal">
+        <div class="modal__half modal__about">
+          <h3 class="modal__title modal__title--about">
+            Here's a bit about me.
+          </h3>
+
+          <h4 class="modal__sub-title">Frontend Software Engineer</h4>
+
+          <p class="modal__para">
+            I am a 37 year-old
+            <b class="orange">frontend software engineer</b>
+            with experience in creating modern, responsive
+            <b class="orange">web applications</b>.
+            <br />
+            I am currently seeking a position where I can contribute my skills
+            and grow as a
+            <b class="orange">software engineer</b>.
           </p>
-          <div class="model__languages">
-           <figure class="model__language">
-             <img class="model__language--img language"
+
+          <div class="modal__languages">
+            <figure class="modal__language">
+              <img
+                class="modal__language--img language"
                 src="./assets/HTML5_logo_and_wordmark.svg.webp"
                 alt="HTML5"
               />
               <span class="language__name">HTML5</span>
-           </figure>
-           <figure class="model__language">
-             <img class="model__language--img language"
+            </figure>
+
+            <figure class="modal__language">
+              <img
+                class="modal__language--img language"
                 src="./assets/images.jpeg"
                 alt="CSS3"
               />
               <span class="language__name">CSS3</span>
-           </figure>
-           <figure class="model__language">
-             <img class="model__language--img language"
+            </figure>
+
+            <figure class="modal__language">
+              <img
+                class="modal__language--img language"
                 src="./assets/png-javascript-badge-picture-8.png"
                 alt="JavaScript"
               />
               <span class="language__name">JavaScript</span>
-           </figure>
+            </figure>
           </div>
         </div>
-        <div class="model__half model__contact">
-          <i class="fas fa-times model__exit click" onclick="togglemodal()"aria-label="Close contact form"></i>
-          <h3 class="model__title model__title--contact">Let's have a chat.</h3>
-          <h4 class="model__sub-title"> I'm currently available to new opportunities.</h4>
-          <form id="contact__form" onsubmit="contact(event)">
+
+        <div class="modal__half modal__contact">
+          <i
+            class="fas fa-times modal__exit click"
+            onclick="togglemodal()"
+            aria-label="Close contact form"
+          ></i>
+
+          <h3 class="modal__title modal__title--contact">Let's have a chat.</h3>
+
+          <h4 class="modal__sub-title">
+            I'm currently available to new opportunities.
+          </h4>
+
+            <form id="contact__form" onsubmit="contact(event)">
+            <div class="form__item">
+              <label class="form__item--label" for="name"> Name </label>
+
+              <input
+                class="input"
+                name="user_name"
+                type="text"
+                id="name"
+                required
+              />
+            </div>
 
             <div class="form__item">
-              <label class="form__item--label" for="name">Name</label>
-              <input class="input" name="user_name" type="text" id="name" required />
+              <label class="form__item--label" for="email"> Email </label>
+
+              <input
+                class="input"
+                name="user_email"
+                type="email"
+                id="email"
+                required
+              />
             </div>
+
             <div class="form__item">
-              <label class="form__item--label" for="email">Email</label>
-              <input class="input" name="user_email" type="email" id="email" required />
+              <label class="form__item--label" for="message"> Message </label>
+
+              <textarea
+                class="textarea"
+                name="user_message"
+                id="message"
+                required
+              ></textarea>
             </div>
+
             <div class="form__item">
-              <label class="form__item--label" for="message">Message</label>
-              <textarea class="textarea" name="user_message" id="message" required></textarea>
-            </div>
-            <div class="form__item">
-              <button type="submit" class="form__submit">Send it my way.</button>
+              <button type="submit" class="form__submit">
+                Send it my way.
+              </button>
             </div>
           </form>
-          <div class="model__overlay model__overlay--loading">
+
+          <div class="modal__overlay modal__overlay--loading">
             <i class="fas fa-spinner fa-spin"></i>
           </div>
-          <div class="model__overlay model__overlay--success">
-            <i class="fas fa-check">Thanks for the message, looking forward to speaking with you!</i>
+
+          <div class="modal__overlay modal__overlay--success">
+            <i class="fas fa-check">
+              Thanks for the message, looking forward to speaking with you!
+            </i>
           </div>
         </div>
         
@@ -193,7 +261,8 @@
       <div class="container">
         <div class="row">
           <h2 class="section__title">
-            Here are some of my <span class="orange">Projects</span>
+            Here are some of my
+            <span class="orange">Projects</span>
           </h2>
 
           <ul class="project__list">
@@ -252,10 +321,8 @@
     <section id="projects">
       <div class="container">
         <div class="row">
-          <h2 class="section__title">
-            Project 2</span>
-          </h2>
-          
+          <h2 class="section__title">Project 2</h2>
+
           <ul class="project__list">
             <li class="project">
               <div class="project__wrapper">
@@ -312,9 +379,7 @@
     <section id="projects">
       <div class="container">
         <div class="row">
-          <h2 class="section__title">
-            Project 3</span>
-          </h2>
+          <h2 class="section__title">Project 3</h2>
 
           <ul class="project__list">
             <li class="project">
@@ -368,6 +433,7 @@
         </div>
       </div>
     </section>
+
     <footer>
       <div class="container">
         <div class="row footer__row">
@@ -379,6 +445,7 @@
               alt="Thomas Babb"
             />
           </figure>
+
           <div class="footer__social--list">
             <a
               href="#"
@@ -386,18 +453,21 @@
             >
               Github
             </a>
+
             <a
               href="#"
               class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               Linkedin
             </a>
+
             <a
               href="#"
               class="footer__social--link link__hover-effect link__hover-effect--white"
             >
               Contact
             </a>
+
             <a
               href="#"
               class="footer__social--link link__hover-effect link__hover-effect--white"
@@ -405,6 +475,7 @@
               Resume
             </a>
           </div>
+
           <p class="footer__copyright">
             &copy; 2026 Thomas Babb. All rights reserved.
           </p>
