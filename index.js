@@ -1,3 +1,4 @@
+console.log("INDEX.JS IS LOADED");
 // template_zepbzpv
 // service_37vvo12
 // user_CPDpNHh5-XGqxpOZ6
@@ -15,7 +16,7 @@ function contact(event) {
       "service_37vvo12",
       "template_zepbzpv",
       event.target,
-      "user_CPDpNHh5-XGqxpOZ6",
+      "CPDpNHh5-XGqxpOZ6",
     )
     .then(() => {
       loading.classList.remove("model__overlay--visible");
@@ -26,15 +27,10 @@ function contact(event) {
       }, 3000);
     })
     .catch((error) => {
-  loading.classList.remove("model__overlay--visible");
+      loading.classList.remove("model__overlay--visible");
 
-  console.log("EmailJS error:", error);
-  console.log("EmailJS error text:", error.text);
-
-  alert(
-    "The email is temporarily unavailable. Please contact me directly at Tomleebabb@gmail.com"
-  );
-});
+      console.log("EmailJS error:", error);
+      console.log("EmailJS error text:", error.text);
 
       alert(
         "The email is temporarily unavailable. Please contact me directly at Tomleebabb@gmail.com",
@@ -42,8 +38,20 @@ function contact(event) {
     });
 }
 
-setTimeout(() => {
-  loading.classList.remove("model__overlay--visible");
-  success.classList += "model__overlay--visible";
-  console.log("this worked 1");
-}, 500);
+alert(
+  "The email is temporarily unavailable. Please contact me directly at Tomleebabb@gmail.com",
+);
+
+let ismodelopen = false
+Function togglemodel() {
+  if (modelopen) {
+    ismodelopen = false
+    return document.body.classList.remove("model--open")
+  }
+  ismodelopen = !ismodelopen;
+//Toggle Model
+console.log{'togglemodel'}
+document.body.classlist +=
+
+
+}

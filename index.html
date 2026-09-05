@@ -55,7 +55,7 @@
             </a>
           </li>
 
-          <li class="nav__link click">
+          <li class="nav__link onclick="togglemodel()"">
             <a
               href="#contact"
               class="nav__link--anchor link__hover-effect link__hover-effect--black"
@@ -79,7 +79,7 @@
             solutions.
             <br />
             Here is a little bit
-            <strong class="orange">about me</strong>.
+            <strong class="orange" onclick="togglemodel()">about me</strong>.
           </p>
 
           <div class="social__list">
@@ -114,15 +114,13 @@
           </div>
         </div>
       </header>
-
       <a
         href="mailto:thomasbabb@gmail.com"
         class="mail__btn"
-        aria-label="Email Thomas"
+        aria-label="Email Thomas" onclick="togglemodel"
       >
         <i class="fas fa-envelope"></i>
       </a>
-
       <a href="#projects" class="scroll" aria-label="Scroll to projects">
         <div class="scroll__icon click"></div>
       </a>
@@ -138,21 +136,21 @@
           <div class="model__languages">
            <figure class="model__language">
              <img class="model__language--img language"
-                src="./assets/html5.png"
+                src="./assets/HTML5_logo_and_wordmark.svg.webp"
                 alt="HTML5"
               />
               <span class="language__name">HTML5</span>
            </figure>
            <figure class="model__language">
              <img class="model__language--img language"
-                src="./assets/css3.png"
+                src="./assets/images.jpeg"
                 alt="CSS3"
               />
               <span class="language__name">CSS3</span>
            </figure>
            <figure class="model__language">
              <img class="model__language--img language"
-                src="./assets/javascript.png"
+                src="./assets/png-javascript-badge-picture-8.png"
                 alt="JavaScript"
               />
               <span class="language__name">JavaScript</span>
@@ -160,6 +158,7 @@
           </div>
         </div>
         <div class="model__half model__contact">
+          <i class="fas fa-times model__exit click" onclick="togglemodel()"aria-label="Close contact form"></i>
           <h3 class="model__title model__title--contact">Let's have a chat.</h3>
           <h4 class="model__sub-title"> I'm currently available to new opportunities.</h4>
           <form id="contact__form" onsubmit="contact(event)">
@@ -187,7 +186,7 @@
             <i class="fas fa-check">Thanks for the message, looking forward to speaking with you!</i>
           </div>
         </div>
-        <i class="fas fa-times model__exit click" aria-label="Close contact form"></i>
+        
       </div>
     </section>
     <section id="projects">
@@ -261,7 +260,7 @@
             <li class="project">
               <div class="project__wrapper">
                 <img
-                  src="./assets/blinker mockup.png"
+                  src="./assets/360_F_159770529_fJv6e2PhYM3yssOCj3ABb6yc0iSMzAbV.jpg"
                   class="project__img"
                   alt="Car Sales Project"
                 />
@@ -321,7 +320,7 @@
             <li class="project">
               <div class="project__wrapper">
                 <img
-                  src="./assets/blinker mockup.png"
+                  src="./assets/360_F_159770529_fJv6e2PhYM3yssOCj3ABb6yc0iSMzAbV.jpg"
                   class="project__img"
                   alt="Car Sales Project"
                 />
