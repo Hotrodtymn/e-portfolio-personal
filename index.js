@@ -2,7 +2,8 @@
 // service_37vvo12
 // user_CPDpNHh5-XGqxpOZ6
 
-function contact(event) {
+<form id="contact__form" onsubmit="contact(event)">
+ {
   event.preventDefault();
 
   const loading = document.querySelector(".model__overlay--loading");
