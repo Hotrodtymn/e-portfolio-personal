@@ -189,6 +189,10 @@ nav,
   color: #242424;
 }
 
+.dark-theme .nav__link {
+  color: white;
+}
+
 /* =========================
    NAVIGATION
 ========================= */
