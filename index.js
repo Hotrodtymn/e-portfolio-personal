@@ -38,20 +38,14 @@ function contact(event) {
     });
 }
 
-alert(
-  "The email is temporarily unavailable. Please contact me directly at Tomleebabb@gmail.com",
-);
-
-let ismodelopen = false
-Function togglemodel() {
-  if (modelopen) {
-    ismodelopen = false
-    return document.body.classList.remove("model--open")
+let ismodelopen = false;
+function togglemodal() {
+  if (ismodelopen) {
+    ismodelopen = false;
+    return document.body.classList.remove("model--open");
   }
   ismodelopen = !ismodelopen;
-//Toggle Model
-console.log{'togglemodel'}
-document.body.classlist +=
-
-
+  //Toggle Model
+  console.log("togglemodel");
+  document.body.classList += " model--open";
 }
