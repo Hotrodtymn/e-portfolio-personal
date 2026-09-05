@@ -2,8 +2,7 @@
 // service_37vvo12
 // user_CPDpNHh5-XGqxpOZ6
 
-<form id="contact__form" onsubmit="contact(event)">
- {
+function contact(event) {
   event.preventDefault();
 
   const loading = document.querySelector(".model__overlay--loading");
@@ -26,8 +25,16 @@
         success.classList.remove("model__overlay--visible");
       }, 3000);
     })
-    .catch(() => {
-      loading.classList.remove("model__overlay--visible");
+    .catch((error) => {
+  loading.classList.remove("model__overlay--visible");
+
+  console.log("EmailJS error:", error);
+  console.log("EmailJS error text:", error.text);
+
+  alert(
+    "The email is temporarily unavailable. Please contact me directly at Tomleebabb@gmail.com"
+  );
+});
 
       alert(
         "The email is temporarily unavailable. Please contact me directly at Tomleebabb@gmail.com",
