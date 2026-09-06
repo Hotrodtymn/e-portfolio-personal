@@ -385,10 +385,10 @@ section {
   height: 700px;
   box-shadow: 0 20px 80px 0 rgba(0, 0, 0, 0.55);
   overflow: hidden;
-  display: none;
+  display: flex;
   transition:
     visibility 1s,
-    z-index 1s,
+    z-index -1,
     box-shadow 0.5s ease;
 }
 
@@ -407,10 +407,6 @@ section {
   color: white;
   transition: all 300ms ease;
   transform: translateX(110%);
-}
-
-.modal--open .modal {
-  display: flex;
 }
 
 .modal--open .modal__about {
@@ -602,7 +598,7 @@ section {
 }
 
 .project:hover .project__img {
-  transform: scale(0.7);
+  transform: scale(1.4);
   filter: blur(5px);
 }
 
