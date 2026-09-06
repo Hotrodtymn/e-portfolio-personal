@@ -35,6 +35,10 @@ p {
   margin-bottom: 12px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* =========================
    BUTTON / CLICK EFFECTS
 ========================= */
@@ -193,6 +197,10 @@ nav,
   color: white;
 }
 
+.dark-theme #personal-logo {
+  filter: invert(1);
+}
+
 /* =========================
    NAVIGATION
 ========================= */
@@ -314,12 +322,13 @@ section {
   background-color: #f06449;
   color: white;
   padding: 0;
-  position: absolute;
+  position: fixed;
   bottom: 32px;
   right: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
 
 /* =========================
@@ -691,4 +700,61 @@ footer {
 
 footer .container {
   padding: 0 12px;
+}
+
+/* =========================
+   Shapes
+========================= */
+
+/* =========================
+   Smartphones
+========================= */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 90px;
+  }
+  .header__para {
+    font-size: 20px;
+  }
+  .modal {
+    top: 0%;
+    left: 0%;
+    transform: none;
+    height: auto;
+    width: 100%;
+    flex-direction: column-reverse;
+    border-radius: 0%;
+  }
+}
+
+/* =========================
+   Small phones
+========================= */
+
+@media (max-width 400px) {
+  .title {
+    font-size: 52px;
+  }
+  .header__para {
+    font-size: 18px;
+  }
+  .nav__link:first-child {
+    display: none;
+  }
+  .project__discription--para {
+    display: none;
+  }
+  .project__description {
+    left: 0%;
+    padding: 0%;
+    width: 100%;
+    text-align: center;
+  }
+  .project__description--sub-title {
+    margin-bottom: 8px;
+  }
+  .modal__half {
+    padding: 40px;
+  }
 }
