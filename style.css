@@ -581,6 +581,48 @@ section {
   cursor: pointer;
 }
 
+.modal__languages {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.modal__language {
+  text-align: center;
+  margin: 0;
+}
+
+/* HTML */
+.modal__language:nth-child(1) .modal__language--img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  scale: 2;
+  transform: translateY(-6px);
+}
+
+/* CSS */
+.modal__language:nth-child(2) .modal__language--img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  scale: 2.8;
+}
+
+/* JavaScript */
+.modal__language:nth-child(3) .modal__language--img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  scale: 1.52;
+}
+
+.language__name {
+  display: block;
+  margin-top: 10px;
+}
+
 /* =========================
    PROJECTS
 ========================= */
